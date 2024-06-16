@@ -6,6 +6,7 @@ const config = {
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
     dialect: 'postgres',
+    dialectModule: pg,
     port: process.env.DB_PORT,
     dialectOptions: {
       ssl: {
@@ -20,7 +21,14 @@ const config = {
     database: process.env.DB_NAME_TEST,
     host: process.env.DB_HOST,
     dialect: 'postgres',
+    dialectModule: pg,
     port: process.env.DB_PORT,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
   },
   production: {
     username: process.env.DB_USERNAME_PROD,
@@ -28,6 +36,7 @@ const config = {
     database: process.env.DB_NAME_PROD,
     host: process.env.DB_HOST_PROD,
     dialect: 'postgres',
+    dialectModule: pg,
     port: process.env.DB_PORT_PROD,
     dialectOptions: {
       ssl: {
