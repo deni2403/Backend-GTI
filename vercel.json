@@ -6,7 +6,8 @@
       "use": "@vercel/node"
     }
   ],
-  "buildCommand": "npm install && npm install pg",
+  "buildCommand": "npm install",
+  "installCommand": "npm install pg",
   "routes": [
     {
       "src": "/(.*)",
