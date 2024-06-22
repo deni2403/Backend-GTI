@@ -4,7 +4,7 @@ const updateIddleDays = async () => {
   try {
     await container.update(
       { iddle_days: Sequelize.literal('iddle_days + 1') },
-      { where: {} },
+      { where: {}, logging: false },
     );
     console.log('iddle_days updated successfully');
   } catch (error) {
