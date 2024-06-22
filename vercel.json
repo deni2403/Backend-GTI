@@ -12,6 +12,16 @@
     {
       "src": "/(.*)",
       "dest": "index.js"
+    },
+    {
+      "src": "/updateIddleDays",
+      "dest": "/controllers/cronJobController.js"
+    }
+  ],
+  "crons": [
+    {
+      "path": "/updateIddleDays",
+      "schedule": "*/10 * * * *"
     }
   ]
 }
