@@ -12,7 +12,7 @@ const {updateIddleDays} = require('../controllers/cronJobController')
 
 
 router.post('/login',login)
-router.get('/updateIddleDays', updateIddleDays);
+router.post('/updateIddleDays', updateIddleDays);
 router.use(authentication)
 router.get('/getMe',currentUser)
 router.get('/logs',userAuthorization,getLogActivity)
