@@ -6,9 +6,9 @@ const updateIddleDays = async () => {
       { iddle_days: Sequelize.literal('iddle_days + 1') },
       { where: {}, logging: false },
     );
-    console.log('iddle_days updated successfully');
+    res.status(200).send('iddle_days updated successfully');
   } catch (error) {
-    console.error('Error updating iddle_days:', error);
+    res.status(500).send('Error updating iddle_days');
   }
 };
 
