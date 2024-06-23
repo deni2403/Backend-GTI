@@ -11,6 +11,10 @@ const { login, currentUser } = require('../controllers/userController');
 const { updateIddleDays } = require('../controllers/cronJobController');
 
 router.post('/login', login);
+router.get('/server-time', (req, res) => {
+  const serverTime = new Date().toLocaleString();
+  res.json({ serverTime });
+});
 router.get('/updateIddleDays', updateIddleDays);
 router.use(authentication);
 router.get('/getMe', currentUser);
