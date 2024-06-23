@@ -1,6 +1,6 @@
 const { Sequelize, container } = require('../models');
 
-const updateIddleDays = async () => {
+const updateIddleDays = async (res) => {
   try {
     await container.update(
       { iddle_days: Sequelize.literal('iddle_days + 1') },
