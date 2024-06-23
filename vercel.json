@@ -21,7 +21,7 @@
   "crons": [
     {
       "path": "/updateIddleDays",
-      "schedule": "15 13 * * *"
+      "schedule": "20 13 * * *"
     }
   ]
 }
